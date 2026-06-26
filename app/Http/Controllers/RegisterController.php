@@ -15,8 +15,8 @@ class RegisterController extends Controller
             'name'=>['required','min:3','max:100'],
             'email'=>['required','email:dns','unique:users'],
             'password'=>['required','min:5','max:100'],
-            'role'=>['user'],
         ]);
+        $valedateData['role']='user';
         User::create($validateData);
         return redirect('/login')->with('success','Register Successful');
     }
