@@ -4,7 +4,7 @@
 
 <div class="register-box">
   <div class="register-logo">
-    <a href="../../index2.html">{{ $title }}</a>
+    <a href="/">{{ $title }}</a>
   </div>
 
   <div class="card">

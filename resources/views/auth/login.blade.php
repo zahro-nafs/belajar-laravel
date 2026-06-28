@@ -3,7 +3,7 @@
 @section('login')
   <div class="login-box">
     <div class="login-logo">
-      <a href="../../index2.html">{{ $title }}</a>
+      <a href="/">{{ $title }}</a>
     </div>
     @if (session()->has('success'))
       <div class="alert alert-success alert-dismissible fade show" role="alert">
