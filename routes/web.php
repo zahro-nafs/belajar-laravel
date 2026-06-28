@@ -18,8 +18,8 @@ Route::post('/register', [RegisterController::class, 'register']);
 
 Route::get('/dashboard', [DashboardController::class, 'index'])->middleware('auth');
 
-Route::get('/mahasiswa', [MahasiswaController::class, 'index']);
-Route::post('/mahasiswa', [MahasiswaController::class, 'store']);
-Route::get('/mahasiswa/{id}/edit', [MahasiswaController::class, 'edit']);
-Route::put('/mahasiswa/{id}', [MahasiswaController::class, 'update']);
-Route::delete('/mahasiswa/{id}', [MahasiswaController::class, 'destroy']);
+Route::get('/mahasiswa', [MahasiswaController::class, 'index'])->middleware('auth');;
+Route::post('/mahasiswa', [MahasiswaController::class, 'store'])->middleware('auth');;
+Route::get('/mahasiswa/{id}/edit', [MahasiswaController::class, 'edit'])->middleware('auth');;
+Route::put('/mahasiswa/{id}', [MahasiswaController::class, 'update'])->middleware('auth');;
+Route::delete('/mahasiswa/{id}', [MahasiswaController::class, 'destroy'])->middleware('auth');;
